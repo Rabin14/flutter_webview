@@ -1,4 +1,3 @@
-
 import 'package:example_project/webView.dart';
 import 'package:flutter/material.dart';
 
@@ -41,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           onPressed: () {
             // Do something when the button is pressed
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => webView()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => webView()));
           },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
