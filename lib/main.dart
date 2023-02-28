@@ -1,3 +1,5 @@
+
+
 import 'package:example_project/webView.dart';
 import 'package:flutter/material.dart';
 
@@ -37,16 +39,34 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Do something when the button is pressed
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => webView()));
-          },
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-          ),
-          child: Text('Click me'),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                // Do something when the button is pressed
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WebViewScreen(url: 'https://pub.dev',)));
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+              ),
+              child: Text('Click me'),
+            ),
+            SizedBox(height: 10),
+
+            ElevatedButton(
+              onPressed: () {
+                // Do something when the button is pressed
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WebViewScreen(url: 'https://pub.dev',)));
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+              ),
+              child: Text('Click me'),
+            ),
+
+          ],
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
